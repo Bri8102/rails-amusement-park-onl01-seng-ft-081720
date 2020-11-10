@@ -1,0 +1,24 @@
+<%= form_with(model: @user) do |f| %>
+    <%= f.label "Name: " %><br>
+    <%= f.text_field :name %><br>
+
+    <%= f.label "Height: " %><br>
+    <%= f.text_field :height %><br>
+
+    <%= f.label "How happy are you? (1-10): " %><br>
+    <%= f.text_field :happiness %><br>
+
+    <%= f.label "How nauseous are you feeling? (1-10): " %><br>
+    <%= f.text_field :nausea %><br>
+
+    <%= f.label "How much money did you bring? ($1 = 1 ticket): " %><br>
+    <%= f.text_field :tickets %><br>
+
+    <%= f.label "Are you a park Administrator?" %>
+    <%= f.check_box :admin, {id: :user_admin} %><br>
+
+    <%= f.label "Password: " %><br>
+    <%= f.password_field :password %><br>
+
+    <%= f.submit %>
+<% end %> 

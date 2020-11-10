@@ -1,0 +1,6 @@
+<%= form_with(controller: session) do |f| %>
+    <%= f.select "user_name", options_from_collection_for_select(User.all, "name", "name"),
+     include_blank: "Select User"  %>
+    <%= f.password_field "user_password"%>
+    <%= f.submit "Sign In" %>
+<% end %>
